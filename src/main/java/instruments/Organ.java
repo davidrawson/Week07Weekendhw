@@ -14,4 +14,8 @@ public class Organ extends Instrument implements IPlayable {
     public String play() {
         return "Extremely Ray Charles sound";
     }
+
+    public boolean getPACTested() {
+        return this.pacTested;
+    }
 }

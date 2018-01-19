@@ -19,4 +19,9 @@ public class OrganTest {
         assertEquals("Extremely Ray Charles sound", organ.play());
     }
 
+    @Test
+    public void isPACTested(){
+        assertEquals(true, organ.getPACTested());
+    }
+
 }
