@@ -1,21 +1,36 @@
+import behaviours.ISellable;
+
 import java.util.ArrayList;
 
-public class Shop<T> {
-    ArrayList<T> items;
+public class Shop {
+
+    ArrayList<ISellable> stock;
 
     public Shop() {
-        this.items = new ArrayList<T>();
+        this.stock = new ArrayList<>();
     }
 
-    public void addItem(T item){
-        this.items.add(item);
+    public void addStockItem(ISellable item){
+        this.stock.add(item);
     }
 
     public int itemCount(){
-        return this.items.size();
+        return this.stock.size();
     }
 
-    public T removeItem(){
-        return this.items.remove(0);
+    public void removeItem(ISellable item){
+        for (int i=0; i<stock.size(); i++){
+            if (stock.get(i) == item){
+                stock.remove(i);
+            }
+        }
+    }
+
+    public double totalPotentialProfit(){
+        double totalPotentialProfit = 0.0;
+        for (int i=0; i<stock.size(); i++){
+            totalPotentialProfit += stock.get(i).calculateMarkup();
+        }
+        return totalPotentialProfit;
     }
 }
