@@ -31,9 +31,10 @@ public class ShopTest {
         assertEquals(2, shop.itemCount());
     }
 
-//    @Test
-//    public void canReturnItem(){
-//
-//    }
+    @Test
+    public void canReturnItem(){
+        shop.addItem(sheetMusic);
+        assertEquals(sheetMusic, shop.removeItem());
+    }
 
 }
