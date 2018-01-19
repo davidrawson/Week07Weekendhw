@@ -38,4 +38,9 @@ public class InstrumentTest {
         assertEquals(485.0, acousticGuitar.getSellPrice(), 0.01);
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(135.0, acousticGuitar.calculateMarkup(), 0.01);
+    }
+
 }

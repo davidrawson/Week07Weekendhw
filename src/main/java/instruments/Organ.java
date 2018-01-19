@@ -1,6 +1,8 @@
 package instruments;
 
-public class Organ extends Instrument implements IPlayable{
+import behaviours.IPlayable;
+
+public class Organ extends Instrument implements IPlayable {
 
     private boolean pacTested;
 

@@ -12,7 +12,7 @@ public class GuitarTest {
     public void before(){
         acousticGuitar = new AcousticGuitar("Gibson", "Hummingbird", "String", 350.0, 485.0,6);
     }
-    
+
     @Test
     public void hasNumberOfStrings(){
         assertEquals(6, acousticGuitar.getNumberOfStrings());

@@ -1,6 +1,8 @@
 package instruments;
 
-public class AcousticGuitar extends Guitar implements IPlayable{
+import behaviours.IPlayable;
+
+public class AcousticGuitar extends Guitar implements IPlayable {
 
 
     public AcousticGuitar(String make, String model, String family, double buyPrice, double sellPrice, int numberOfStrings) {

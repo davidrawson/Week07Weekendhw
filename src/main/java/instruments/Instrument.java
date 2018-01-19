@@ -1,6 +1,8 @@
 package instruments;
 
-public abstract class Instrument {
+import behaviours.ISellable;
+
+public abstract class Instrument implements ISellable{
 
     protected String make;
     protected String model;
@@ -36,5 +38,9 @@ public abstract class Instrument {
 
     public double getSellPrice() {
         return this.sellPrice;
+    }
+
+    public double calculateMarkup(){
+        return this.sellPrice - this.buyPrice;
     }
 }
